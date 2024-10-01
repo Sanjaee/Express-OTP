@@ -14,13 +14,12 @@ datasource db {
 }
 
 
-model User {
-  id          String       @id @default(cuid())
-  username    String    
-  email       String    @unique
-  password    String
-  createdAt   DateTime  @default(now())
-  updatedAt   DateTime  @updatedAt
-  verificationToken String?
-  isVerified  Boolean   @default(false)
+model Barang {
+  id         String   @id @default(cuid())
+  nama       String
+  deskripsi  String
+  harga      Float
+  stok       Int
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
 }
